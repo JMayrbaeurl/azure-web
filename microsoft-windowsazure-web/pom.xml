@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 
 	<name>microsoft-windowsazure-web</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/JMayrbaeurl/azure-web</url>
 	<description>Windows Azure Webapplication extensions</description>
 
 	<licenses>
@@ -19,6 +19,16 @@
 			<comments>A business-friendly OSS license</comments>
 		</license>
 	</licenses>
+	
+	<scm>
+		<connection>scm:git:git@github.com:JMayrbaeurl/azure-web.git</connection>
+		<url>scm:git:git@github.com:JMayrbaeurl/azure-web.git</url>
+		<developerConnection>scm:git:git@github.com:JMayrbaeurl/azure-web.git</developerConnection>
+	</scm>
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/JMayrbaeurl/azure-web/issues</url>
+	</issueManagement>
 	
 	<developers>
 		<developer>
@@ -103,6 +113,11 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.1</version>
 			</plugin>
 
 		</plugins>
