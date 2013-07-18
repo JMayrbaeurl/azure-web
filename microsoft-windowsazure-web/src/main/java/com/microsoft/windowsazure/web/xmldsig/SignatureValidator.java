@@ -71,6 +71,10 @@ public class SignatureValidator {
 				validateContext.setIdAttributeNS(differentlyIdentifiedElement.getElement(), differentlyIdentifiedElement.getIdAttribute().getNamespaceURI(), differentlyIdentifiedElement.getIdAttribute().getLocalPart());
 			}
 		}
+		
+		//Fixes issue with newer JDK's being more strict on xml attribute ids
+		validateContext.setIdAttributeNS(containingElement, null, "ID");
+		
 		// Unmarshall the signature
 		XMLSignatureFactory signatureFactory = XMLSignatureFactory.getInstance("DOM");
 		try {
